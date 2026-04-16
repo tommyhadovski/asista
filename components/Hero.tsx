@@ -19,13 +19,13 @@ export function Hero() {
             </div>
 
             <h1 className="mt-8 font-medium leading-[1.05] tracking-tight">
-              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">Žiadny zmeškaný hovor.</span>
-              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">Žiadny stratený klient.</span>
-              <span className="font-serif italic gradient-text block mt-2 text-4xl sm:text-5xl md:text-7xl">Nikdy viac.</span>
+              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">Vaša firma</span>
+              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">na autopilote.</span>
+              <span className="font-serif italic gradient-text block mt-2 text-xl sm:text-2xl md:text-4xl">Jedna AI. Všetko pod kontrolou.</span>
             </h1>
 
             <p className="mt-8 max-w-xl text-lg text-white/60 md:text-xl leading-relaxed">
-              Priemerná firma stráca 15 600€ ročne na zmeškaných hovoroch.
+              Priemerná firma stráca <span className="text-[#F472B6] font-semibold">15 600€ ročne</span> na zmeškaných hovoroch.
               AiAsista ich zachytí všetky – 24 hodín denne, 7 dní v týždni.
             </p>
 
