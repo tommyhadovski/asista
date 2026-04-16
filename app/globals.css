@@ -263,11 +263,13 @@ html, body {
   background: linear-gradient(
     90deg,
     #FFFFFF 0%,
-    #FFFFFF 30%,
-    #E0E0E0 60%,
-    #FFFFFF 100%
+    #A78BFA 20%,
+    #F472B6 40%,
+    #6EE7B7 60%,
+    #FFFFFF 80%,
+    #A78BFA 100%
   );
-  background-size: 200% auto;
+  background-size: 300% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
