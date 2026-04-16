@@ -15,19 +15,19 @@ export function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#A78BFA] opacity-75"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-gradient-to-br from-[#A78BFA] to-[#F472B6]"></span>
               </span>
-              AI Chief of Staff pre vašu firmu
+              AI šéf pre vašu firmu
             </div>
 
             <h1 className="mt-8 text-5xl font-medium leading-[0.95] tracking-tight md:text-7xl">
-              <span className="shimmer">Celé vaše operácie.</span>
+              <span className="shimmer">Vaša firma na autopilote.</span>
               <br />
-              <span className="font-serif italic gradient-text">Jedna AI.</span>
+              <span className="font-serif italic gradient-text">Jedna AI. Všetko pod kontrolou.</span>
             </h1>
 
             <p className="mt-8 max-w-xl text-lg text-white/60 md:text-xl leading-relaxed">
               AiAsista dvíha hovory, manažuje kalendáre, sleduje financie,
-              koordinuje tím a ukazuje vám presne kde rastiete. Celý back-office
-              vo vrecku – 24 hodín denne.
+              koordinuje tím a ukazuje vám presne kde rastiete. Váš AI šéf,
+              ktorý nikdy nespí – 24 hodín denne.
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
