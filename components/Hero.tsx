@@ -18,10 +18,10 @@ export function Hero() {
               AI šéf pre vašu firmu
             </div>
 
-            <h1 className="mt-8 text-5xl font-medium leading-[0.95] tracking-tight md:text-7xl">
-              <span className="shimmer">Vaša firma na autopilote.</span>
+            <h1 className="mt-8 font-medium leading-[0.95] tracking-tight">
+              <span className="shimmer text-3xl sm:text-5xl md:text-7xl">Vaša firma na autopilote.</span>
               <br />
-              <span className="font-serif italic gradient-text" style={{ fontSize: "3rem" }}>Jedna AI. Všetko pod kontrolou.</span>
+              <span className="font-serif italic gradient-text text-2xl sm:text-3xl md:text-[3rem]">Jedna AI. Všetko pod kontrolou.</span>
             </h1>
 
             <p className="mt-8 max-w-xl text-lg text-white/60 md:text-xl leading-relaxed">
