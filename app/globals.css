@@ -262,9 +262,10 @@ html, body {
 .shimmer {
   background: linear-gradient(
     90deg,
-    rgba(250, 250, 249, 0.8) 0%,
-    rgba(250, 250, 249, 1) 30%,
-    rgba(250, 250, 249, 0.8) 60%
+    #FFFFFF 0%,
+    #FFFFFF 30%,
+    #E0E0E0 60%,
+    #FFFFFF 100%
   );
   background-size: 200% auto;
   -webkit-background-clip: text;
