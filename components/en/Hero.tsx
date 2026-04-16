@@ -18,10 +18,10 @@ export function HeroEN() {
               AI boss for your business
             </div>
 
-            <h1 className="mt-8 font-medium leading-[0.95] tracking-tight">
-              <span className="shimmer text-3xl sm:text-5xl md:text-7xl">Your business on autopilot.</span>
-              <br />
-              <span className="font-serif italic gradient-text text-2xl sm:text-3xl md:text-[3rem]">One AI. Everything under control.</span>
+            <h1 className="mt-8 font-medium leading-[1.05] tracking-tight">
+              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">Your business</span>
+              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">on autopilot.</span>
+              <span className="font-serif italic gradient-text block mt-2 text-xl sm:text-2xl md:text-4xl">One AI. Everything under control.</span>
             </h1>
 
             <p className="mt-8 max-w-xl text-lg text-white/60 md:text-xl leading-relaxed">

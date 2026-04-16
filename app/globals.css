@@ -262,18 +262,17 @@ html, body {
 .shimmer {
   background: linear-gradient(
     90deg,
-    #FFFFFF 0%,
-    #A78BFA 20%,
-    #F472B6 40%,
-    #6EE7B7 60%,
-    #FFFFFF 80%,
-    #A78BFA 100%
+    #FAFAF9 0%,
+    #E2D9F3 25%,
+    #FAFAF9 50%,
+    #D1FAE5 75%,
+    #FAFAF9 100%
   );
-  background-size: 300% auto;
+  background-size: 400% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  animation: shimmer 3s linear infinite;
+  animation: shimmer 8s ease-in-out infinite;
 }
 
 /* --- Noise texture --- */
