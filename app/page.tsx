@@ -15,17 +15,17 @@ import { Pricing } from "@/components/Pricing";
 import { FAQ } from "@/components/FAQ";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
-import { VapiButton } from "@/components/VapiButton";
+import { CallDemo } from "@/components/CallDemo";
 
 export default function Home() {
   return (
     <>
       <Nav />
-      <VapiButton />
       <main className="flex-1">
         <Hero />
         <Marquee />
         <Problem />
+        <CallDemo />
         <Capabilities />
         <AICopilot />
         <HowItWorks />
