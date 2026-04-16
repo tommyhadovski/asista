@@ -46,6 +46,7 @@ export default function RootLayout({
       className={`${inter.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-[#0A0A14] text-[#FAFAF9]">
+        <script dangerouslySetInnerHTML={{ __html: `if(window.location.hash)window.scrollTo(0,0);` }} />
         {children}
       </body>
     </html>
