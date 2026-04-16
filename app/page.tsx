@@ -16,15 +16,19 @@ import { FAQ } from "@/components/FAQ";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 import { CallDemo } from "@/components/CallDemo";
+import { ROICalculator } from "@/components/ROICalculator";
+import { FloatingParticles } from "@/components/FloatingParticles";
 
 export default function Home() {
   return (
     <>
+      <FloatingParticles />
       <Nav />
       <main className="flex-1">
         <Hero />
         <Marquee />
         <CallDemo />
+        <ROICalculator />
         <Capabilities />
         <AICopilot />
         <HowItWorks />

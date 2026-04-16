@@ -19,20 +19,19 @@ export function Hero() {
             </div>
 
             <h1 className="mt-8 font-medium leading-[1.05] tracking-tight">
-              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">Vaša firma</span>
-              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">na autopilote.</span>
-              <span className="font-serif italic gradient-text block mt-2 text-xl sm:text-2xl md:text-4xl">Jedna AI. Všetko pod kontrolou.</span>
+              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">Žiadny zmeškaný hovor.</span>
+              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">Žiadny stratený klient.</span>
+              <span className="font-serif italic gradient-text block mt-2 text-4xl sm:text-5xl md:text-7xl">Nikdy viac.</span>
             </h1>
 
             <p className="mt-8 max-w-xl text-lg text-white/60 md:text-xl leading-relaxed">
-              AiAsista dvíha hovory, manažuje kalendáre, sleduje financie,
-              koordinuje tím a ukazuje vám presne kde rastiete. Váš AI šéf,
-              ktorý nikdy nespí – 24 hodín denne.
+              Priemerná firma stráca 15 600€ ročne na zmeškaných hovoroch.
+              AiAsista ich zachytí všetky – 24 hodín denne, 7 dní v týždni.
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <a href="#demo" className="btn-primary inline-flex h-14 items-center justify-center rounded-full px-8 text-sm">
-                Rezervovať demo →
+              <a href="#roi" className="btn-primary inline-flex h-14 items-center justify-center rounded-full px-8 text-sm">
+                Spočítajte si úsporu →
               </a>
               <a href="#copilot" className="btn-ghost inline-flex h-14 items-center justify-center rounded-full px-8 text-sm">
                 Pozrieť, čo všetko vie
