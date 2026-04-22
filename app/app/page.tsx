@@ -38,11 +38,12 @@ export default function LoginPage() {
     setError("");
     setLoading(true);
 
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
         data: { company_name: companyName },
+        emailRedirectTo: `${window.location.origin}/app/dashboard`,
       },
     });
 
@@ -52,7 +53,15 @@ export default function LoginPage() {
       return;
     }
 
-    router.push("/app/dashboard");
+    // If session exists (email confirmation disabled), go to dashboard
+    if (data.session) {
+      router.push("/app/dashboard");
+      return;
+    }
+
+    // If no session (email confirmation enabled), show message
+    setError("Registrácia úspešná! Skontrolujte si email a potvrďte účet.");
+    setLoading(false);
   }
 
   return (
