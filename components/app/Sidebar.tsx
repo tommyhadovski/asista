@@ -1,43 +1,42 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabase";
 
 const sections = [
   {
-    label: "Operácie",
+    label: "Prehľad",
     items: [
-      { href: "/app/dashboard", label: "Prehľad", icon: "📊" },
-      { href: "/app/inbox", label: "Inbox", icon: "📬", badge: "12" },
-      { href: "/app/calls", label: "Hovory", icon: "📞" },
-      { href: "/app/calendar", label: "Kalendár", icon: "📅" },
-    ],
-  },
-  {
-    label: "Rast",
-    items: [
-      { href: "/app/clients", label: "Klienti", icon: "👥" },
-      { href: "/app/reactivation", label: "Reaktivácia", icon: "💎", badge: "NEW" },
-      { href: "/app/marketing", label: "Marketing", icon: "📣" },
-      { href: "/app/reports", label: "Reporty", icon: "📈" },
-      { href: "/app/copilot", label: "AI Copilot", icon: "🧠" },
+      { href: "/app/dashboard", label: "Dashboard", icon: "📊" },
+      { href: "/app/inbox", label: "Inbox", icon: "📥" },
     ],
   },
   {
     label: "Biznis",
     items: [
-      { href: "/app/finance", label: "Financie", icon: "💼" },
-      { href: "/app/team", label: "Tím", icon: "⚡" },
-      { href: "/app/activity", label: "Aktivita", icon: "📜" },
+      { href: "/app/finance", label: "Faktúry", icon: "📄" },
+      { href: "/app/clients", label: "Kontakty", icon: "👥" },
+      { href: "/app/calendar", label: "Kalendár", icon: "📅" },
     ],
   },
   {
-    label: "Setup",
+    label: "Tím",
     items: [
-      { href: "/app/knowledge", label: "Mozog Asisty", icon: "🧩" },
-      { href: "/app/automations", label: "Automatizácie", icon: "🔄" },
-      { href: "/app/integrations", label: "Integrácie", icon: "🔌" },
-      { href: "/app/billing", label: "Fakturácia", icon: "💳" },
+      { href: "/app/team", label: "Tím", icon: "👤" },
+      { href: "/app/activity", label: "Úlohy", icon: "✅" },
+    ],
+  },
+  {
+    label: "AI",
+    items: [
+      { href: "/app/copilot", label: "Copilot", icon: "🧠" },
+      { href: "/app/automations", label: "Automatizácie", icon: "⚡" },
+    ],
+  },
+  {
+    label: "Nastavenia",
+    items: [
       { href: "/app/settings", label: "Nastavenia", icon: "⚙️" },
     ],
   },
@@ -45,6 +44,12 @@ const sections = [
 
 export function Sidebar() {
   const pathname = usePathname();
+  const router = useRouter();
+
+  async function handleLogout() {
+    await supabase.auth.signOut();
+    router.push("/app");
+  }
 
   return (
     <aside className="fixed left-0 top-0 z-40 hidden h-screen w-64 flex-col border-r border-white/5 bg-[#050509] md:flex">
@@ -67,7 +72,7 @@ export function Sidebar() {
           Asista je aktívna
         </div>
         <div className="mt-1 text-[10px] text-white/50">
-          Spracováva hovory · 24/7
+          Monitoruje váš biznis · 24/7
         </div>
       </div>
 
@@ -93,11 +98,6 @@ export function Sidebar() {
                   >
                     <span className="text-sm">{item.icon}</span>
                     <span className="flex-1">{item.label}</span>
-                    {"badge" in item && item.badge && (
-                      <span className="rounded-full bg-[#F472B6]/20 px-1.5 py-0.5 text-[10px] text-[#F472B6]">
-                        {item.badge}
-                      </span>
-                    )}
                     {isActive && (
                       <span className="h-1 w-1 rounded-full bg-gradient-to-br from-[#A78BFA] to-[#F472B6]" />
                     )}
@@ -118,18 +118,15 @@ export function Sidebar() {
             </div>
             <div className="flex-1 overflow-hidden">
               <div className="truncate text-sm font-medium text-white">Tomáš Hadovský</div>
-              <div className="truncate text-[11px] text-white/45">Business · 27/500 hovorov</div>
+              <div className="truncate text-[11px] text-white/45">Business plan</div>
             </div>
           </div>
-          <div className="mt-3 h-1 overflow-hidden rounded-full bg-white/5">
-            <div className="h-full w-[5%] rounded-full bg-gradient-to-r from-[#A78BFA] to-[#F472B6]" />
-          </div>
-          <Link
-            href="/app"
-            className="mt-3 block text-center text-[10px] text-white/40 transition hover:text-white/70"
+          <button
+            onClick={handleLogout}
+            className="mt-3 block w-full text-center text-[10px] text-white/40 transition hover:text-white/70"
           >
             Odhlásiť sa
-          </Link>
+          </button>
         </div>
       </div>
     </aside>

@@ -1,6 +1,60 @@
+"use client";
+
 import Link from "next/link";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { supabase } from "@/lib/supabase";
 
 export default function LoginPage() {
+  const router = useRouter();
+  const [isRegister, setIsRegister] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [companyName, setCompanyName] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  async function handleLogin(e: React.FormEvent) {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
+
+    const { error } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (error) {
+      setError(error.message);
+      setLoading(false);
+      return;
+    }
+
+    router.push("/app/dashboard");
+  }
+
+  async function handleRegister(e: React.FormEvent) {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
+
+    const { error } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: { company_name: companyName },
+      },
+    });
+
+    if (error) {
+      setError(error.message);
+      setLoading(false);
+      return;
+    }
+
+    router.push("/app/dashboard");
+  }
+
   return (
     <div className="relative flex min-h-[85vh] items-center justify-center">
       {/* Background */}
@@ -20,18 +74,32 @@ export default function LoginPage() {
           </div>
 
           <h1 className="mt-8 text-center text-3xl font-medium">
-            Vitajte späť.
+            {isRegister ? "Vytvorte si účet." : "Vitajte späť."}
           </h1>
           <p className="mt-2 text-center text-sm text-white/55">
-            Prihláste sa do svojej AI operatívy.
+            {isRegister
+              ? "Začnite riadiť svoj biznis s AI."
+              : "Prihláste sa do svojej AI operatívy."}
           </p>
 
-          <div className="mt-10 space-y-4">
+          {error && (
+            <div className="mt-4 rounded-xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-center text-sm text-red-400">
+              {error}
+            </div>
+          )}
+
+          <form
+            onSubmit={isRegister ? handleRegister : handleLogin}
+            className="mt-10 space-y-4"
+          >
             <div>
               <label className="text-xs text-white/50">Email</label>
               <input
                 type="email"
-                defaultValue="tomas@aiasista.eu"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                placeholder="vas@email.sk"
+                required
                 className="mt-2 w-full rounded-2xl border border-white/8 bg-white/[0.02] px-5 py-4 text-sm text-white outline-none transition focus:border-[#A78BFA]/40"
               />
             </div>
@@ -39,29 +107,59 @@ export default function LoginPage() {
               <label className="text-xs text-white/50">Heslo</label>
               <input
                 type="password"
-                defaultValue="••••••••••"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="••••••••••"
+                required
                 className="mt-2 w-full rounded-2xl border border-white/8 bg-white/[0.02] px-5 py-4 text-sm text-white outline-none transition focus:border-[#A78BFA]/40"
               />
             </div>
 
-            <Link
-              href="/app/dashboard"
-              className="btn-primary flex h-14 w-full items-center justify-center rounded-full text-sm"
+            {isRegister && (
+              <div>
+                <label className="text-xs text-white/50">Názov firmy</label>
+                <input
+                  type="text"
+                  value={companyName}
+                  onChange={(e) => setCompanyName(e.target.value)}
+                  placeholder="Vaša firma s.r.o."
+                  required
+                  className="mt-2 w-full rounded-2xl border border-white/8 bg-white/[0.02] px-5 py-4 text-sm text-white outline-none transition focus:border-[#A78BFA]/40"
+                />
+              </div>
+            )}
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="btn-primary flex h-14 w-full items-center justify-center rounded-full text-sm disabled:opacity-50"
             >
-              Prihlásiť sa →
-            </Link>
-
-            <div className="flex items-center gap-3 text-xs text-white/40">
-              <div className="h-px flex-1 bg-white/8" />
-              alebo
-              <div className="h-px flex-1 bg-white/8" />
-            </div>
-
-            <button className="flex h-12 w-full items-center justify-center gap-3 rounded-full border border-white/10 bg-white/[0.02] text-sm text-white/80 transition hover:bg-white/[0.05]">
-              <span>🔐</span>
-              Pokračovať cez Google
+              {loading
+                ? "Načítavam..."
+                : isRegister
+                ? "Registrovať sa →"
+                : "Prihlásiť sa →"}
             </button>
+          </form>
+
+          <div className="mt-6 flex items-center gap-3 text-xs text-white/40">
+            <div className="h-px flex-1 bg-white/8" />
+            alebo
+            <div className="h-px flex-1 bg-white/8" />
           </div>
+
+          <button
+            type="button"
+            onClick={() => {
+              setIsRegister(!isRegister);
+              setError("");
+            }}
+            className="mt-4 flex h-12 w-full items-center justify-center gap-3 rounded-full border border-white/10 bg-white/[0.02] text-sm text-white/80 transition hover:bg-white/[0.05]"
+          >
+            {isRegister
+              ? "Už mám účet — Prihlásiť sa"
+              : "Nemám účet — Registrovať sa"}
+          </button>
 
           <div className="mt-8 flex items-center justify-center gap-2 text-xs text-white/40">
             <span className="h-1 w-1 rounded-full bg-[#6EE7B7]" />
