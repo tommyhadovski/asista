@@ -19,34 +19,49 @@ export function Hero() {
             </div>
 
             <h1 className="mt-8 font-medium leading-[1.05] tracking-tight">
-              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">Menej práce.</span>
-              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">Viac výsledkov.</span>
-              <span className="font-serif italic gradient-text block mt-2 text-xl sm:text-2xl md:text-4xl">AI, ktorá riadi vašu firmu za vás.</span>
+              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">Jedna AI.</span>
+              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">Celá firma.</span>
             </h1>
 
-            <p className="mt-8 max-w-xl text-lg text-white/60 md:text-xl leading-relaxed">
-              Faktúry, účtovníctvo, kalendár, úlohy, CRM a reporting – všetko na jednom mieste.
-              Spýtajte sa AiAsisty čokoľvek a ona to vybaví.
+            {/* Quick wins */}
+            <div className="mt-8 space-y-2.5">
+              {[
+                { text: "„Vystav faktúru Novákovi." — Hotovo.", color: "#6EE7B7" },
+                { text: "„Kto mi dlhuje peniaze?" — Odpoveď za 2 sekundy.", color: "#A78BFA" },
+                { text: "„Čo mám dnes spraviť?" — AI to vie.", color: "#F472B6" },
+                { text: "„Vygeneruj mesačný report." — PDF s grafmi.", color: "#FCD34D" },
+              ].map((item) => (
+                <div key={item.text} className="flex items-center gap-3">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[10px]" style={{ backgroundColor: `${item.color}15`, color: item.color }}>✓</span>
+                  <span className="text-sm text-white/70 sm:text-base">{item.text}</span>
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-6 text-sm text-white/40 italic">
+              Nepýta výplatu. Nerobí chyby. Pracuje 24/7.
             </p>
 
-            <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <a href="#demo" className="btn-primary inline-flex h-14 items-center justify-center rounded-full px-8 text-sm">
-                Vyskúšať 14 dní zdarma →
+                Vyskúšať zadarmo →
               </a>
-              <a href="#copilot" className="btn-ghost inline-flex h-14 items-center justify-center rounded-full px-8 text-sm">
-                Pozrieť čo vie
+              <a href="#cennik" className="btn-ghost inline-flex h-14 items-center justify-center rounded-full px-8 text-sm">
+                Pozrieť cenník
               </a>
             </div>
 
             {/* Feature badges */}
-            <div className="mt-12 flex flex-wrap gap-2">
+            <div className="mt-10 flex flex-wrap gap-2">
               {[
                 "📊 Faktúry",
-                "📅 Smart kalendár",
+                "📅 Kalendár",
                 "👥 CRM",
                 "✅ Úlohy",
                 "🧠 AI Copilot",
                 "📈 Reporting",
+                "📄 Dokumenty",
+                "⚡ Automatizácie",
               ].map((f) => (
                 <div
                   key={f}
