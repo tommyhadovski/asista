@@ -1,31 +1,31 @@
 const faqs = [
   {
     q: "Toto je naozaj všetko v jednom?",
-    a: "Áno. AiAsista nahradí hneď niekoľko nástrojov – recepciu, rezervačný systém, CRM, základnú účtovnú analytiku a asistenta pre stretnutia. Všetko v jednom účte, jeden login, jedna cena.",
+    a: "Áno. AiAsista nahradí hneď niekoľko nástrojov - faktúry, CRM, kalendár, úlohy, reporting a AI asistenta. Všetko v jednom účte, jeden login, jedna cena.",
   },
   {
-    q: "Bude AI hlas znieť ako robot?",
-    a: "Nie. AiAsista používa najnovšie AI hlasy, ktoré sú nerozoznateľné od ľudského. Väčšina zákazníkov si neuvedomí, že hovorila s AI.",
-  },
-  {
-    q: "Ako dlho trvá nasadenie?",
-    a: "Základný setup do 24 hodín. Komplexné integrácie (Pohoda, vlastné CRM, custom workflows) do 72 hodín. Vedieme vás celým procesom my.",
+    q: "Ako dlho trvá registrácia?",
+    a: "2 minúty. Vytvoríte si účet, pridáte firmu a môžete začať. Žiadna inštalácia, žiadne čakanie.",
   },
   {
     q: "Potrebujem meniť svoje existujúce systémy?",
-    a: "Nie. AiAsista sa pripojí na vaše nástroje – Google Calendar, Outlook, Pohoda, HubSpot, Booksy. Neinštalujete nič, nemeníte nič.",
+    a: "Nie. AiAsista funguje samostatne. Ak chcete, môžete ju prepojiť na Google Calendar, Outlook alebo Pohodu - ale nie je to nutné.",
   },
   {
-    q: "Ako sa AiAsista naučí môj biznis?",
-    a: "Pri setupe vás prejdeme dotazníkom (otváracia doba, služby, ceny, FAQ). AiAsista ich pochopí za minúty. Neskôr sa ďalej učí zo svojich hovorov.",
+    q: "Ako sa AI naučí môj biznis?",
+    a: "Stačí zadať základné údaje o firme a začať používať appku. Čím viac dát pridáte (faktúry, kontakty, úlohy), tým lepšie AI odpovedá na vaše otázky.",
   },
   {
-    q: "Čo môj tím – môžu AiAsistu používať tiež?",
-    a: "Áno. V pláne Business a Enterprise dostávate multi-user prístup. Každý člen tímu má vlastný login, práva a notifikácie.",
+    q: "Nahradí AiAsista moju účtovníčku?",
+    a: "Nie a ani nechce. Účtovníčka robí dane, DPH a mzdy. AiAsista robí všetko okolo - faktúry, upomienky, CRM, úlohy a reporting. Ideálne fungujú spolu.",
+  },
+  {
+    q: "Čo môj tím - môžu AiAsistu používať tiež?",
+    a: "Áno. V pláne Business a Pro dostávate multi-user prístup. Každý člen tímu má vlastný login a práva.",
   },
   {
     q: "Je to GDPR compliant?",
-    a: "Áno. Všetky dáta sú uložené v EU (Frankfurt, Nemecko). AiAsista je navrhnutá podľa GDPR od prvého dňa. Zákazník môže požiadať o výmaz kedykoľvek.",
+    a: "Áno. Všetky dáta sú uložené v EU (Frankfurt, Nemecko). AiAsista je navrhnutá podľa GDPR od prvého dňa.",
   },
   {
     q: "Čo ak chcem zrušiť?",
