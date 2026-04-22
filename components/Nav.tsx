@@ -27,7 +27,7 @@ export function Nav() {
             Prihlásiť sa
           </a>
           <a href="/app/dashboard" className="btn-primary rounded-full px-5 py-2.5 text-sm">
-            Otvoriť appku →
+            Vyskúšať zdarma →
           </a>
         </div>
       </div>

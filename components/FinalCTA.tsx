@@ -22,13 +22,13 @@ export function FinalCTA() {
           <span className="font-serif italic gradient-text">zadarmo na 14 dní.</span>
         </h2>
         <p className="mx-auto mt-8 max-w-xl text-lg text-white/60">
-          Bez kreditky. Bez záväzku. Setup za 24 hodín. Ak vás nepresvedčí, rozídeme
+          Bez kreditky. Bez záväzku. Registrácia za 2 minúty. Ak vás nepresvedčí, rozídeme
           sa priateľsky.
         </p>
 
         <div className="mt-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
           <a href="mailto:ahoj@aiasista.eu" className="btn-primary inline-flex h-14 items-center justify-center rounded-full px-10 text-sm">
-            Rezervovať demo →
+            Vyskúšať zdarma →
           </a>
           <a href="mailto:ahoj@aiasista.eu" className="btn-ghost inline-flex h-14 items-center justify-center rounded-full px-10 text-sm">
             ahoj@aiasista.eu
@@ -40,7 +40,7 @@ export function FinalCTA() {
             <span className="h-1 w-1 rounded-full bg-[#6EE7B7]" /> 14 dní zdarma
           </span>
           <span className="flex items-center gap-2">
-            <span className="h-1 w-1 rounded-full bg-[#6EE7B7]" /> Setup za 24h
+            <span className="h-1 w-1 rounded-full bg-[#6EE7B7]" /> Registrácia za 2 min
           </span>
           <span className="flex items-center gap-2">
             <span className="h-1 w-1 rounded-full bg-[#6EE7B7]" /> GDPR · EU

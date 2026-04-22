@@ -1,23 +1,23 @@
 const steps = [
   {
     n: "01",
-    title: "Povieme AiAsiste o vašej firme",
-    time: "15 minút",
-    text: "Prejdeme s vami krátky dotazník – otváracia doba, služby, ceny, časté otázky. AiAsista sa všetko naučí.",
-    icon: "🧠",
+    title: "Vytvoríte si účet",
+    time: "2 minúty",
+    text: "Zaregistrujete sa, pridáte firmu a pozvete tím. Žiadna inštalácia.",
+    icon: "🚀",
   },
   {
     n: "02",
-    title: "Prepojíme s vaším telefónom",
-    time: "1 hodina",
-    text: "Nastavíme presmerovanie hovorov. Neinštalujete nič. Váš telefón ostáva rovnaký.",
-    icon: "🔗",
+    title: "Nahráte svoje dáta",
+    time: "15 minút",
+    text: "Importujte kontakty, faktúry alebo začnite od nuly. AI sa prispôsobí.",
+    icon: "📊",
   },
   {
     n: "03",
-    title: "AiAsista pracuje za vás",
-    time: "od 2. dňa",
-    text: "Keď nezdvihnete, AiAsista sa ozve. Zákazník dostane profesionálnu obsluhu. Vy dostanete rezervácie.",
+    title: "AI pracuje za vás",
+    time: "od 1. dňa",
+    text: "AiAsista generuje faktúry, sleduje platby, pripomína úlohy a odpovedá na vaše otázky.",
     icon: "⚡",
   },
 ];
@@ -33,7 +33,7 @@ export function HowItWorks() {
             Proces
           </div>
           <h2 className="mt-6 text-4xl font-medium md:text-6xl">
-            Za 24 hodín máte vlastnú <br />
+            Za 2 minúty máte vlastnú <br />
             <span className="font-serif italic gradient-text">AI asistentku.</span>
           </h2>
         </div>

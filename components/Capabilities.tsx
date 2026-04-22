@@ -1,81 +1,81 @@
 const modules = [
   {
-    icon: "📞",
-    tag: "Voice & Communications",
-    title: "Hovory, SMS, emaily",
-    text: "Dvíha každý hovor 24/7, volá zmeškaným späť, odpovedá na emaily a posiela SMS. Inbound aj outbound. V slovenčine.",
+    icon: "📊",
+    tag: "Invoicing",
+    title: "Faktúry & bločky",
+    text: "Vyfotíte bloček, AI ho rozpozná a zaúčtuje. Generuje faktúry, sleduje platby a posiela automatické upomienky.",
     color: "#A78BFA",
     gradient: "from-[#A78BFA]/25 to-transparent",
   },
   {
     icon: "📅",
     tag: "Calendar & Scheduling",
-    title: "Inteligentný kalendár",
-    text: "Synchronizácia s Google / Outlook. Rezervuje termíny, rieši kolízie, posiela pripomienky, manažuje celý rozvrh.",
+    title: "Smart kalendár",
+    text: "Inteligentný kalendár, ktorý plánuje schôdzky, rieši kolízie, posiela pripomienky a synchronizuje s Google / Outlook.",
     color: "#F472B6",
     gradient: "from-[#F472B6]/25 to-transparent",
-  },
-  {
-    icon: "🎯",
-    tag: "Meetings",
-    title: "Stretnutia & poznámky",
-    text: "Pripraví brief pred schôdzou, prepíše ju naživo, extrahuje úlohy a pošle follow-up email všetkým účastníkom.",
-    color: "#6EE7B7",
-    gradient: "from-[#6EE7B7]/25 to-transparent",
-  },
-  {
-    icon: "📊",
-    tag: "Financial Analytics",
-    title: "Financie & analytika",
-    text: "Sleduje príjmy, výdaje, cashflow. Ukazuje čo ste zarobili, čo ste stratili, a predikuje ďalší mesiac.",
-    color: "#FCD34D",
-    gradient: "from-[#FCD34D]/25 to-transparent",
   },
   {
     icon: "👥",
     tag: "CRM & Leads",
-    title: "Klienti & obchodné príležitosti",
-    text: "Automaticky zaznamenáva kontakty, kvalifikuje leady, sleduje pipeline a pripomína follow-upy.",
-    color: "#A78BFA",
-    gradient: "from-[#A78BFA]/25 to-transparent",
+    title: "CRM & kontakty",
+    text: "Spravuje kontakty, sleduje obchodné príležitosti, pipeline a automaticky pripomína follow-upy.",
+    color: "#6EE7B7",
+    gradient: "from-[#6EE7B7]/25 to-transparent",
   },
   {
-    icon: "⚡",
-    tag: "Team Operations",
+    icon: "✅",
+    tag: "Tasks & Team",
     title: "Tím & úlohy",
-    text: "Rozvrhy pre zamestnancov, pridelenie úloh, sledovanie výkonu, interná komunikácia. Všetko na jednom mieste.",
-    color: "#F472B6",
-    gradient: "from-[#F472B6]/25 to-transparent",
+    text: "Prideľuje úlohy členom tímu, sleduje deadliny, upozorňuje na oneskorenia a ukazuje vyťaženosť.",
+    color: "#FCD34D",
+    gradient: "from-[#FCD34D]/25 to-transparent",
   },
   {
     icon: "🧠",
     tag: "AI Copilot",
-    title: "Spýtajte sa svojho biznisu",
-    text: "\"Koľko som zarobil minulý týždeň?\" \"Kto mi najviac mešká platby?\" AiAsista odpovedá v reálnom čase.",
+    title: "AI Copilot",
+    text: "\"Koľko som zarobil minulý mesiac?\" \"Kto mi dlží?\" Spýtajte sa čokoľvek a AiAsista odpovedá v reálnom čase.",
+    color: "#A78BFA",
+    gradient: "from-[#A78BFA]/25 to-transparent",
+  },
+  {
+    icon: "📄",
+    tag: "Documents",
+    title: "Dokumenty & zmluvy",
+    text: "AI generuje zmluvy, ponuky a dokumenty z vašich šablón. Podpis, archivácia a vyhľadávanie na jednom mieste.",
+    color: "#F472B6",
+    gradient: "from-[#F472B6]/25 to-transparent",
+  },
+  {
+    icon: "📈",
+    tag: "Reporting & Analytics",
+    title: "Reporting & analytika",
+    text: "Mesačné reporty, cashflow predikcie, porovnania období. Všetko automaticky, bez hodín v Exceli.",
     color: "#6EE7B7",
     gradient: "from-[#6EE7B7]/25 to-transparent",
   },
   {
     icon: "🔄",
     tag: "Automation",
-    title: "Workflow automatizácie",
-    text: "Vizuálny builder pre pravidlá. \"Keď sa stane X, spraví Y.\" Bez programovania, bez IT oddelenia.",
+    title: "Automatizácie",
+    text: "Vizuálny builder pre pravidlá. \"Keď faktúra nie je zaplatená 7 dní, pošli upomienku.\" Bez programovania.",
     color: "#FCD34D",
     gradient: "from-[#FCD34D]/25 to-transparent",
   },
   {
-    icon: "💎",
-    tag: "Reactivation",
-    title: "Reaktivácia databázy",
-    text: "Prebuďte spiacich klientov. AiAsista osloví starých zákazníkov cez email, SMS a hovory – a znova ich privedie.",
+    icon: "💰",
+    tag: "Accounting",
+    title: "Účtovníctvo",
+    text: "Sleduje príjmy, výdaje, DPH. Prepojenie na Pohodu a Money S3. Podklady pre účtovníčku na pár klikov.",
     color: "#A78BFA",
     gradient: "from-[#A78BFA]/25 to-transparent",
   },
   {
-    icon: "🎁",
-    tag: "Done-for-you",
-    title: "Služba na kľúč",
-    text: "Nemáte čas? Nechajte to na náš tím. My navrhneme, spustíme a optimalizujeme kampane za vás. Platíte len % z revenue.",
+    icon: "🔗",
+    tag: "Integrations",
+    title: "Integrácie & API",
+    text: "Prepojenie s nástrojmi, ktoré už používate. Google Workspace, bankové účty, Pohoda, Money S3 a ďalšie.",
     color: "#F472B6",
     gradient: "from-[#F472B6]/25 to-transparent",
   },
@@ -93,11 +93,11 @@ export function Capabilities() {
           </div>
           <h2 className="mt-6 text-4xl font-medium leading-[1.05] md:text-6xl">
             10 modulov. <br />
-            <span className="font-serif italic gradient-text">Jeden operating system.</span>
+            <span className="font-serif italic gradient-text">Jeden AI systém.</span>
           </h2>
           <p className="mt-6 max-w-2xl text-lg text-white/60">
             AiAsista nie je nástroj – je to <em className="font-serif">celý tím</em>.
-            Recepčná, asistentka, účtovníčka, manažérka projektov a analytička
+            Účtovníčka, asistentka, manažérka projektov a analytička
             zabalené v jednej AI.
           </p>
         </div>
@@ -133,7 +133,7 @@ export function Capabilities() {
 
         <div className="mt-16 text-center">
           <p className="text-sm text-white/50">
-            A to je len začiatok. Každý mesiac pridávame nové moduly.{" "}
+            A to je len začiatok. Každý mesiac pridávame nové funkcie.{" "}
             <a href="#demo" className="text-[#A78BFA] transition hover:text-[#F472B6]">
               Pozrite roadmap →
             </a>

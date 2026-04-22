@@ -2,38 +2,38 @@ const industries = [
   {
     icon: "🏢",
     name: "Realitné kancelárie",
-    stat: "+42% obhliadok",
-    desc: "AiAsista kvalifikuje záujemcov, dohaduje obhliadky a posiela klientom informácie o nehnuteľnostiach.",
+    stat: "CRM & ponuky",
+    desc: "AiAsista spravuje kontakty, generuje ponuky na nehnuteľnosti a automaticky fakturuje provízie.",
   },
   {
     icon: "🏥",
     name: "Privátne kliniky",
-    stat: "0 zmeškaných",
-    desc: "Triage urgentných prípadov, rezervácia termínov, prepojenie na CRM. Aj počas víkendu.",
+    stat: "Kalendár & platby",
+    desc: "Smart kalendár pre pacientov, automatické pripomienky termínov a prehľad platieb na jednom mieste.",
   },
   {
     icon: "⚖️",
     name: "Advokátske kancelárie",
-    stat: "24/7 recepcia",
-    desc: "Prijíma nových klientov, kvalifikuje prípady a dohaduje úvodné konzultácie.",
+    stat: "Dokumenty & hodiny",
+    desc: "AI generuje dokumenty, sleduje odpracované hodiny a automaticky fakturuje klientom.",
   },
   {
     icon: "🚗",
     name: "Autosalóny",
-    stat: "Auto poradca",
-    desc: "Odpovedá na otázky o modeloch, cenách, dostupnosti. Dohaduje testovacie jazdy.",
+    stat: "CRM & test drives",
+    desc: "CRM pre záujemcov, plánovanie testovacích jázd a automatické generovanie cenových ponúk.",
   },
   {
     icon: "🏨",
     name: "Hotely & rezorty",
-    stat: "Multijazyková",
-    desc: "Rezervácie, otázky o službách, koncierge asistencia v slovenčine, angličtine aj nemčine.",
+    stat: "Rezervácie & tím",
+    desc: "Správa rezervácií, koordinácia tímu, sledovanie financií a automatické reporty obsadenosti.",
   },
   {
     icon: "💼",
     name: "B2B služby",
-    stat: "Lead qualification",
-    desc: "Účtovníctvo, konzultanti, agentúry. Kvalifikácia leadov a automatizácia onboardingu.",
+    stat: "Faktúry & projekty",
+    desc: "Účtovníctvo, konzultanti, agentúry. Automatické faktúry, sledovanie projektov a mesačný reporting.",
   },
 ];
 
@@ -50,7 +50,7 @@ export function ForWhom() {
           </div>
           <h2 className="mt-6 text-4xl font-medium leading-[1.05] md:text-6xl">
             Pre firmy, kde <br />
-            <span className="font-serif italic gradient-text">každý hovor znamená peniaze.</span>
+            <span className="font-serif italic gradient-text">každá minúta znamená peniaze.</span>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-white/55">
             AiAsista sa prispôsobí vašej brandži. Od realitiek cez privátne kliniky

@@ -1,4 +1,4 @@
-import { LiveCallCard } from "./LiveCallCard";
+import { HeroAnimation } from "./HeroAnimation";
 
 export function Hero() {
   return (
@@ -15,38 +15,38 @@ export function Hero() {
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#A78BFA] opacity-75"></span>
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-gradient-to-br from-[#A78BFA] to-[#F472B6]"></span>
               </span>
-              AI šéf pre vašu firmu
+              AI asistentka pre vašu firmu
             </div>
 
             <h1 className="mt-8 font-medium leading-[1.05] tracking-tight">
-              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">Vaša firma</span>
-              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">na autopilote.</span>
-              <span className="font-serif italic gradient-text block mt-2 text-xl sm:text-2xl md:text-4xl">Jedna AI. Všetko pod kontrolou.</span>
+              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">Menej práce.</span>
+              <span className="shimmer text-4xl sm:text-5xl md:text-7xl block">Viac výsledkov.</span>
+              <span className="font-serif italic gradient-text block mt-2 text-xl sm:text-2xl md:text-4xl">AI, ktorá riadi vašu firmu za vás.</span>
             </h1>
 
             <p className="mt-8 max-w-xl text-lg text-white/60 md:text-xl leading-relaxed">
-              Priemerná firma stráca <span className="text-[#F472B6] font-semibold">15 600€ ročne</span> na zmeškaných hovoroch.
-              AiAsista ich zachytí všetky – 24 hodín denne, 7 dní v týždni.
+              Faktúry, účtovníctvo, kalendár, úlohy, CRM a reporting – všetko na jednom mieste.
+              Spýtajte sa AiAsisty čokoľvek a ona to vybaví.
             </p>
 
             <div className="mt-10 flex flex-col gap-3 sm:flex-row">
-              <a href="#roi" className="btn-primary inline-flex h-14 items-center justify-center rounded-full px-8 text-sm">
-                Spočítajte si úsporu →
+              <a href="#demo" className="btn-primary inline-flex h-14 items-center justify-center rounded-full px-8 text-sm">
+                Vyskúšať 14 dní zdarma →
               </a>
               <a href="#copilot" className="btn-ghost inline-flex h-14 items-center justify-center rounded-full px-8 text-sm">
-                Pozrieť, čo všetko vie
+                Pozrieť čo vie
               </a>
             </div>
 
             {/* Feature badges */}
             <div className="mt-12 flex flex-wrap gap-2">
               {[
-                "📞 Voice & Calls",
-                "📅 Calendar",
-                "📊 Financie",
+                "📊 Faktúry",
+                "📅 Smart kalendár",
                 "👥 CRM",
+                "✅ Úlohy",
                 "🧠 AI Copilot",
-                "🔄 Automatizácie",
+                "📈 Reporting",
               ].map((f) => (
                 <div
                   key={f}
@@ -59,7 +59,7 @@ export function Hero() {
           </div>
 
           <div id="live-demo" className="relative">
-            <LiveCallCard />
+            <HeroAnimation />
           </div>
         </div>
       </div>

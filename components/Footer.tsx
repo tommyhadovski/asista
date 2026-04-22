@@ -14,8 +14,8 @@ export function Footer() {
               aiasista<span className="text-[#A78BFA]">.</span>
             </div>
             <p className="mt-5 text-sm text-white/50">
-              AI šéf pre vašu firmu. Dvíhame hovory, manažujeme kalendáre,
-              sledujeme financie a koordinujeme tím. 24/7, bez prestávky.
+              AI asistentka pre vašu firmu. Faktúry, účtovníctvo, kalendár,
+              úlohy, CRM a reporting – všetko na jednom mieste. 24/7.
             </p>
             <div className="mt-6 flex items-center gap-2 rounded-full border border-[#6EE7B7]/20 bg-[#6EE7B7]/5 px-3 py-1.5 text-xs text-[#6EE7B7] w-fit">
               <span className="h-1.5 w-1.5 rounded-full bg-[#6EE7B7] animate-blink" />
@@ -59,7 +59,7 @@ export function Footer() {
         </div>
 
         <div className="mt-16 flex flex-col gap-4 border-t border-white/5 pt-8 text-xs text-white/40 sm:flex-row sm:justify-between">
-          <p>© 2026 AiAsista • Bratislava, Slovensko</p>
+          <p>© 2026 AiAsista · Bratislava, Slovensko</p>
           <p className="flex items-center gap-2">
             Postavené s láskou v Európe
             <span className="h-1 w-1 rounded-full bg-white/30" />

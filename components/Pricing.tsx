@@ -1,54 +1,66 @@
 const plans = [
   {
-    name: "Starter",
-    price: "299",
-    tagline: "Pre malé firmy a živnostníkov",
-    modules: ["Voice & Calls", "Calendar", "CRM light"],
+    name: "Free",
+    price: "0",
+    tagline: "Vyskúšajte si to zadarmo",
+    modules: ["Základné funkcie"],
     features: [
-      "Do 200 hovorov mesačne",
-      "1 telefónne číslo",
-      "Google / Outlook kalendár",
-      "Základné CRM (do 500 kontaktov)",
-      "1 jazyk (SK)",
+      "3 klienti v CRM",
+      "5 faktúr mesačne",
+      "Smart kalendár",
+      "10 AI Copilot otázok/mes",
+      "1 používateľ",
+      "Navždy zadarmo",
+    ],
+    highlight: false,
+  },
+  {
+    name: "Starter",
+    price: "29",
+    tagline: "Pre živnostníkov a freelancerov",
+    modules: ["Faktúry", "Kalendár", "CRM", "AI Copilot"],
+    features: [
+      "Neobmedzené faktúry",
+      "CRM do 500 kontaktov",
+      "100 AI Copilot otázok/mes",
+      "Smart kalendár",
+      "Automatické upomienky",
+      "1 používateľ",
       "Email support",
-      "Setup zdarma",
     ],
     highlight: false,
   },
   {
     name: "Business",
-    price: "699",
-    tagline: "Pre rastúce firmy",
-    modules: ["+ Financie", "+ Meetings", "+ Automatizácie", "+ AI Copilot"],
+    price: "79",
+    tagline: "Pre firmy 2-15 ľudí",
+    modules: ["+ Tím & Úlohy", "+ Dokumenty", "+ Reporting", "+ Automatizácie"],
     features: [
-      "Do 1000 hovorov mesačne",
-      "Outbound volania & SMS kampane",
-      "Finančná analytika + reporty",
-      "Meeting AI (prepis, zhrnutie, úlohy)",
-      "AI Copilot (spýtaj sa svojho biznisu)",
-      "Workflow automatizácie",
-      "CRM do 5 000 kontaktov",
-      "2 jazyky (SK + EN)",
+      "Všetko zo Starter",
+      "AI Copilot neobmedzený",
+      "Tím & úlohy (do 15 ľudí)",
+      "AI generovanie dokumentov",
+      "Pokročilé automatizácie",
+      "Mesačné reporty s AI analýzou",
+      "Do 2 000 kontaktov",
       "Prioritný support",
     ],
     highlight: true,
   },
   {
-    name: "Enterprise",
-    price: "1 499",
-    tagline: "Pre reťazce a väčšie firmy",
-    modules: ["Full operating system"],
+    name: "Pro",
+    price: "199",
+    tagline: "Pre väčšie firmy 15+",
+    modules: ["Plný AI systém"],
     features: [
-      "Neobmedzené hovory & SMS",
-      "Custom AI hlas",
-      "4+ jazyky",
-      "Team Operations modul",
-      "Pokročilé automatizácie a API",
-      "Neobmedzené CRM kontakty",
+      "Všetko z Business",
+      "Neobmedzení používatelia",
+      "Pokročilá analytika",
+      "API prístup",
+      "Custom automatizácie",
+      "Multi-pobočky",
       "Dedikovaný account manager",
-      "Custom integrácie (Pohoda, SAP...)",
-      "SLA 99.9% uptime",
-      "On-premise option",
+      "Prepojenie na Pohodu/Money S3",
     ],
     highlight: false,
   },
@@ -66,13 +78,13 @@ export function Pricing() {
             Cenník
           </div>
           <h2 className="mt-6 text-4xl font-medium md:text-6xl">
-            Jeden AI tím. <br />
-            <span className="font-serif italic gradient-text">Zlomok ceny živého.</span>
+            Jeden AI systém. <br />
+            <span className="font-serif italic gradient-text">Zlomok ceny účtovníčky.</span>
           </h2>
           <p className="mt-6 text-white/55">Všetky plány majú 14-dňový trial zdarma. Bez kreditky.</p>
         </div>
 
-        <div className="mt-20 grid gap-6 md:grid-cols-3">
+        <div className="mt-20 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {plans.map((p) => (
             <div
               key={p.name}

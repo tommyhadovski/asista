@@ -1,13 +1,13 @@
 const rows = [
-  { feature: "Dvíha hovory 24/7", asista: "Áno", human: "Nie (8h denne)" },
-  { feature: "Víkendy a sviatky", asista: "Bez prestávky", human: "Neprítomná" },
-  { feature: "Reakčný čas", asista: "2 sekundy", human: "5–15 sekúnd" },
-  { feature: "Paralelné hovory", asista: "Neobmedzené", human: "1 naraz" },
-  { feature: "Žiadne chyby z únavy", asista: "Áno", human: "Nie" },
-  { feature: "Multijazyčnosť (SK/EN/DE)", asista: "Áno", human: "Zriedka" },
-  { feature: "Dovolenka / PN", asista: "Nikdy", human: "Pravidelne" },
-  { feature: "Hľadanie a školenie", asista: "0 hodín", human: "Týždne" },
-  { feature: "Mesačný náklad", asista: "od 199€", human: "~1 500€ + odvody" },
+  { feature: "Faktúry", asista: "AI z fotky", human: "Ručne" },
+  { feature: "Reporting", asista: "Spýtaj sa", human: "Hodiny v Exceli" },
+  { feature: "Úlohy", asista: "AI priraďuje", human: "Zabudnuté" },
+  { feature: "Cash flow", asista: "AI predpovedá", human: "Zistíš neskoro" },
+  { feature: "Upomienky", asista: "Automatické", human: "Ručne" },
+  { feature: "Dostupnosť", asista: "24/7", human: "Pracovná doba" },
+  { feature: "Chyby", asista: "Minimálne", human: "Časté" },
+  { feature: "Onboarding", asista: "15 minút", human: "Týždne" },
+  { feature: "Mesačný náklad", asista: "od 49€", human: "Účtovníčka 300€+" },
 ];
 
 export function Comparison() {
@@ -22,10 +22,10 @@ export function Comparison() {
           </div>
           <h2 className="mt-6 text-4xl font-medium leading-[1.05] md:text-6xl">
             AiAsista vs. <br />
-            <span className="font-serif italic gradient-text">živá recepčná.</span>
+            <span className="font-serif italic gradient-text">Excel & papiere.</span>
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-white/55">
-            Obe majú svoje miesto. Ale keď spočítate čas, peniaze a spoľahlivosť,
+            Oboje funguje. Ale keď spočítate čas, peniaze a spoľahlivosť,
             rozdiel je jasný.
           </p>
         </div>
@@ -39,7 +39,7 @@ export function Comparison() {
               AiAsista
             </div>
             <div className="text-center text-sm font-medium text-white/50">
-              Živá recepčná
+              Excel & papiere
             </div>
           </div>
 
@@ -67,8 +67,20 @@ export function Comparison() {
 
         <div className="mt-12 text-center">
           <p className="text-sm text-white/50">
-            Ročná úspora len na platovom náklade:{" "}
-            <span className="gradient-text font-serif text-2xl">~15 600€</span>
+            Ročná úspora na administratíve:{" "}
+            <span className="gradient-text font-serif text-2xl">~6 000€</span>
+          </p>
+        </div>
+
+        {/* Accountant note */}
+        <div className="glass mt-10 rounded-2xl p-8 text-center">
+          <p className="text-lg font-medium text-white/90">
+            💡 AiAsista <span className="text-[#A78BFA]">nenahradí</span> vašu účtovníčku.
+          </p>
+          <p className="mt-3 mx-auto max-w-2xl text-sm text-white/55 leading-relaxed">
+            Nechajte účtovníčku robiť dane, DPH a mzdy – to čo vie najlepšie.
+            AiAsista spraví všetko <span className="text-[#6EE7B7]">okolo nej</span> – faktúry, upomienky, CRM, úlohy, reporting a AI analýzy.
+            Veci, na ktoré vaša účtovníčka nemá čas. A vy tiež nie.
           </p>
         </div>
       </div>

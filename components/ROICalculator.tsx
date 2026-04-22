@@ -3,17 +3,17 @@
 import { useState } from "react";
 
 export function ROICalculator() {
-  const [missedCalls, setMissedCalls] = useState(10);
+  const [adminHours, setAdminHours] = useState(15);
 
-  const avgLostPerCall = 150;
-  const monthlyLoss = missedCalls * avgLostPerCall * 30;
-  const annualLoss = monthlyLoss * 12;
-  const catchRate = 0.95;
-  const monthlySaved = Math.round(monthlyLoss * catchRate);
-  const annualSaved = Math.round(annualLoss * catchRate);
-  const planCost = 299;
+  const hourlyRate = 15; // average admin hourly cost in EUR
+  const aiEfficiency = 0.8; // AI saves 80% of time
+  const hoursSaved = Math.round(adminHours * aiEfficiency);
+  const weeklySaved = hoursSaved * hourlyRate;
+  const monthlySaved = weeklySaved * 4;
+  const annualSaved = monthlySaved * 12;
+  const planCost = 49; // Starter plan
+  const netMonthlySaving = monthlySaved - planCost;
   const roi = Math.round(((monthlySaved - planCost) / planCost) * 100);
-  const netMonthlyProfit = monthlySaved - planCost;
 
   const formatNum = (n: number) =>
     n.toLocaleString("sk-SK", { maximumFractionDigits: 0 });
@@ -32,14 +32,14 @@ export function ROICalculator() {
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#6EE7B7] opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-gradient-to-br from-[#6EE7B7] to-[#A78BFA]"></span>
             </span>
-            ROI Kalkulačka
+            Kalkulačka úspor
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight">
-            <span className="shimmer block">Koľko vás stoja</span>
-            <span className="gradient-text font-serif italic block mt-1">zmešakné hovory?</span>
+            <span className="shimmer block">Koľko času strácate</span>
+            <span className="gradient-text font-serif italic block mt-1">administratívou?</span>
           </h2>
           <p className="mt-4 text-white/50 max-w-2xl mx-auto text-lg">
-            Posuňte slider a zistite, koľko peňazí denne strácate – a koľko vám AiAsista ušetrí.
+            Posuňte slider a zistite, koľko hodín a peňazí vám AiAsista ušetrí každý týždeň.
           </p>
         </div>
 
@@ -53,7 +53,7 @@ export function ROICalculator() {
               {/* Left: Slider + Input */}
               <div>
                 <label className="block text-sm uppercase tracking-[0.15em] text-white/50 mb-4">
-                  Počet zmeškaných hovorov denne
+                  Hodiny administratívy týždenne
                 </label>
 
                 <div className="relative mb-4">
@@ -63,64 +63,64 @@ export function ROICalculator() {
                     WebkitTextFillColor: "transparent",
                     transition: "all 0.3s ease",
                   }}>
-                    {missedCalls}
+                    {adminHours}
                   </div>
-                  <span className="text-white/40 text-lg ml-2">hovorov / deň</span>
+                  <span className="text-white/40 text-lg ml-2">hodín / týždeň</span>
                 </div>
 
                 <input
                   type="range"
                   min={1}
-                  max={50}
-                  value={missedCalls}
-                  onChange={(e) => setMissedCalls(Number(e.target.value))}
+                  max={40}
+                  value={adminHours}
+                  onChange={(e) => setAdminHours(Number(e.target.value))}
                   className="roi-slider w-full h-2 rounded-full appearance-none cursor-pointer bg-white/10"
                   style={{
-                    background: `linear-gradient(to right, #A78BFA 0%, #F472B6 ${((missedCalls - 1) / 49) * 100}%, rgba(255,255,255,0.1) ${((missedCalls - 1) / 49) * 100}%)`,
+                    background: `linear-gradient(to right, #A78BFA 0%, #F472B6 ${((adminHours - 1) / 39) * 100}%, rgba(255,255,255,0.1) ${((adminHours - 1) / 39) * 100}%)`,
                   }}
                 />
                 <div className="flex justify-between text-xs text-white/30 mt-2">
-                  <span>1</span>
-                  <span>25</span>
-                  <span>50</span>
+                  <span>1h</span>
+                  <span>20h</span>
+                  <span>40h</span>
                 </div>
 
                 {/* Assumptions */}
                 <div className="mt-10 space-y-4">
                   <div className="flex items-center justify-between rounded-2xl border border-white/[0.06] bg-white/[0.02] px-5 py-4">
-                    <span className="text-sm text-white/50">Priemerná hodnota hovoru</span>
-                    <span className="text-sm font-medium text-white/80">150 €</span>
+                    <span className="text-sm text-white/50">Priemerná hodinová sadzba admin</span>
+                    <span className="text-sm font-medium text-white/80">15 €/h</span>
                   </div>
                   <div className="flex items-center justify-between rounded-2xl border border-white/[0.06] bg-white/[0.02] px-5 py-4">
-                    <span className="text-sm text-white/50">AiAsista zachytí</span>
-                    <span className="text-sm font-medium text-[#6EE7B7]">95 % hovorov</span>
+                    <span className="text-sm text-white/50">AI ušetrí</span>
+                    <span className="text-sm font-medium text-[#6EE7B7]">80 % času</span>
                   </div>
                   <div className="flex items-center justify-between rounded-2xl border border-white/[0.06] bg-white/[0.02] px-5 py-4">
-                    <span className="text-sm text-white/50">Mesačný plán</span>
-                    <span className="text-sm font-medium text-white/80">299 € / mesiac</span>
+                    <span className="text-sm text-white/50">Plán Starter</span>
+                    <span className="text-sm font-medium text-white/80">49 € / mesiac</span>
                   </div>
                 </div>
               </div>
 
               {/* Right: Results */}
               <div className="space-y-6">
-                {/* Loss card */}
-                <div className="rounded-2xl border border-red-500/10 bg-red-500/[0.03] p-6">
-                  <div className="text-xs uppercase tracking-[0.15em] text-red-400/70 mb-3">
-                    Vaše mesačné straty
+                {/* Time saved card */}
+                <div className="rounded-2xl border border-[#A78BFA]/10 bg-[#A78BFA]/[0.03] p-6">
+                  <div className="text-xs uppercase tracking-[0.15em] text-[#A78BFA]/70 mb-3">
+                    Ušetrený čas týždenne
                   </div>
-                  <div className="text-4xl md:text-5xl font-bold text-red-400 tabular-nums" style={{ transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)" }}>
-                    -{formatNum(monthlyLoss)} €
+                  <div className="text-4xl md:text-5xl font-bold text-[#A78BFA] tabular-nums" style={{ transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)" }}>
+                    {hoursSaved} hodín
                   </div>
                   <div className="text-sm text-white/30 mt-1">
-                    ročne: -{formatNum(annualLoss)} €
+                    mesačne: {hoursSaved * 4} hodín
                   </div>
                 </div>
 
-                {/* Savings card */}
+                {/* Money saved card */}
                 <div className="rounded-2xl border border-[#6EE7B7]/10 bg-[#6EE7B7]/[0.03] p-6">
                   <div className="text-xs uppercase tracking-[0.15em] text-[#6EE7B7]/70 mb-3">
-                    AiAsista vám ušetrí mesačne
+                    Mesačná úspora
                   </div>
                   <div
                     className="text-4xl md:text-5xl font-bold tabular-nums"
@@ -139,7 +139,7 @@ export function ROICalculator() {
                   </div>
                 </div>
 
-                {/* ROI + Net profit */}
+                {/* ROI + Net saving */}
                 <div className="grid grid-cols-2 gap-4">
                   <div className="rounded-2xl border border-[#A78BFA]/10 bg-[#A78BFA]/[0.03] p-5">
                     <div className="text-xs uppercase tracking-[0.12em] text-[#A78BFA]/60 mb-2">
@@ -151,10 +151,10 @@ export function ROICalculator() {
                   </div>
                   <div className="rounded-2xl border border-[#FCD34D]/10 bg-[#FCD34D]/[0.03] p-5">
                     <div className="text-xs uppercase tracking-[0.12em] text-[#FCD34D]/60 mb-2">
-                      Čistý zisk / mes.
+                      Čistá úspora / mes.
                     </div>
                     <div className="text-3xl font-bold text-[#FCD34D] tabular-nums" style={{ transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)" }}>
-                      {formatNum(netMonthlyProfit)} €
+                      {formatNum(netMonthlySaving)} €
                     </div>
                   </div>
                 </div>
@@ -164,7 +164,7 @@ export function ROICalculator() {
                   href="#demo"
                   className="btn-primary inline-flex h-14 w-full items-center justify-center rounded-full px-8 text-sm font-medium mt-2"
                 >
-                  Začať šetriť →
+                  Začať šetriť čas →
                 </a>
               </div>
             </div>
