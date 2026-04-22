@@ -43,7 +43,6 @@ export default function LoginPage() {
       password,
       options: {
         data: { company_name: companyName },
-        emailRedirectTo: `${window.location.origin}/app/dashboard`,
       },
     });
 
@@ -53,14 +52,37 @@ export default function LoginPage() {
       return;
     }
 
-    // If session exists (email confirmation disabled), go to dashboard
+    // If session exists, go to dashboard
     if (data.session) {
       router.push("/app/dashboard");
       return;
     }
 
-    // If no session (email confirmation enabled), show message
-    setError("Registrácia úspešná! Skontrolujte si email a potvrďte účet.");
+    // Auto-confirm email via server API and then login
+    if (data.user) {
+      await fetch("/api/auth/confirm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userId: data.user.id }),
+      });
+
+      // Now login with confirmed account
+      const { error: loginError } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
+
+      if (loginError) {
+        setError(loginError.message);
+        setLoading(false);
+        return;
+      }
+
+      router.push("/app/dashboard");
+      return;
+    }
+
+    setError("Niečo sa pokazilo. Skúste to znova.");
     setLoading(false);
   }
 
