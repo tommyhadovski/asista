@@ -26,10 +26,10 @@ export function Hero() {
             {/* Quick wins */}
             <div className="mt-8 space-y-2.5">
               {[
-                { text: "„Vystav faktúru Novákovi." — Hotovo.", color: "#6EE7B7" },
-                { text: "„Kto mi dlhuje peniaze?" — Odpoveď za 2 sekundy.", color: "#A78BFA" },
-                { text: "„Čo mám dnes spraviť?" — AI to vie.", color: "#F472B6" },
-                { text: "„Vygeneruj mesačný report." — PDF s grafmi.", color: "#FCD34D" },
+                { text: "Vystav fakturu Novakovi - Hotovo.", color: "#6EE7B7" },
+                { text: "Kto mi dlhuje peniaze? - Odpoved za 2 sekundy.", color: "#A78BFA" },
+                { text: "Co mam dnes spravit? - AI to vie.", color: "#F472B6" },
+                { text: "Vygeneruj mesacny report - PDF s grafmi.", color: "#FCD34D" },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-3">
                   <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-[10px]" style={{ backgroundColor: `${item.color}15`, color: item.color }}>✓</span>

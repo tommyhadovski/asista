@@ -1,7 +1,7 @@
 const testimonials = [
   {
     quote:
-      "Za prvý mesiac nám AiAsista zachytila 47 hovorov, ktoré by sme inak stratili. Dve z nich boli klienti za 180 000€. Vrátilo sa nám to šesťnásobne.",
+      "Predtým som strávil 3 hodiny týždenne faktúrami. Teraz poviem AiAsiste jednu vetu a faktúra je hotová. Ušetrím 12 hodín mesačne.",
     name: "Martin Hájek",
     role: "Konateľ",
     company: "Hájek & Partners Reality",
@@ -10,7 +10,7 @@ const testimonials = [
   },
   {
     quote:
-      "Pacienti volajú aj cez víkend. Predtým sme sa im ozývali v pondelok a polovica už bola u konkurencie. Teraz AiAsista prijíma všetko okamžite.",
+      "Najlepšie na tom je AI Copilot. Spýtam sa 'kto mi dlhuje?' a za 2 sekundy mám odpoveď. Žiadne hľadanie v Exceli, žiadny stres.",
     name: "MUDr. Lucia Kollárová",
     role: "Majiteľka kliniky",
     company: "Klinika Kollárová",
@@ -19,7 +19,7 @@ const testimonials = [
   },
   {
     quote:
-      "Najlepšia investícia roka. 399€ mesačne za asistenciu, ktorá by ma ako živý človek stála 1500€. A ešte funguje 24/7 bez chýb.",
+      "AiAsista nám automaticky posiela upomienky na nezaplatené faktúry. Predtým sme na to zabúdali a strácali tisíce eur. Teraz cash flow funguje.",
     name: "Peter Varga",
     role: "CEO",
     company: "Varga Auto Group",
@@ -28,10 +28,10 @@ const testimonials = [
   },
   {
     quote:
-      "Rozdiel je obrovský. Naše obhliadky narástli o 42% za 6 týždňov. AiAsista sa stala súčasťou tímu – len nestojí nič v porovnaní s tým čo prináša.",
+      "Konečne mám prehľad o celej firme na jednom mieste. Úlohy, klienti, financie – a keď niečo neviem, spýtam sa AI. Ako mať osobného asistenta za 79€.",
     name: "Katarína Dubnická",
     role: "Partner",
-    company: "Dubnická Real Estate",
+    company: "Dubnická Consulting",
     avatar: "KD",
     color: "from-[#FCD34D] to-[#A78BFA]",
   },
@@ -50,7 +50,7 @@ export function Testimonials() {
           </div>
           <h2 className="mt-6 text-4xl font-medium leading-[1.05] md:text-6xl">
             Firmy, ktoré s nami <br />
-            <span className="font-serif italic gradient-text">rastú každý deň.</span>
+            <span className="font-serif italic gradient-text">šetria čas každý deň.</span>
           </h2>
         </div>
 
@@ -60,7 +60,6 @@ export function Testimonials() {
               key={t.name}
               className="glass group relative overflow-hidden rounded-3xl p-10"
             >
-              {/* Large quote mark */}
               <div className="pointer-events-none absolute right-8 top-4 font-serif text-[10rem] leading-none text-white/[0.04] transition group-hover:text-white/[0.08]">
                 &ldquo;
               </div>
@@ -88,20 +87,20 @@ export function Testimonials() {
 
         <div className="mt-12 flex flex-wrap items-center justify-center gap-x-12 gap-y-4 text-center">
           <div>
+            <div className="font-serif text-4xl gradient-text">12h</div>
+            <div className="mt-1 text-xs uppercase tracking-widest text-white/50">ušetrených mesačne</div>
+          </div>
+          <div>
             <div className="font-serif text-4xl gradient-text">98%</div>
             <div className="mt-1 text-xs uppercase tracking-widest text-white/50">spokojnosť klientov</div>
           </div>
           <div>
-            <div className="font-serif text-4xl gradient-text">12k+</div>
-            <div className="mt-1 text-xs uppercase tracking-widest text-white/50">hovorov mesačne</div>
-          </div>
-          <div>
             <div className="font-serif text-4xl gradient-text">24/7</div>
-            <div className="mt-1 text-xs uppercase tracking-widest text-white/50">bez výpadkov</div>
+            <div className="mt-1 text-xs uppercase tracking-widest text-white/50">AI dostupnosť</div>
           </div>
           <div>
             <div className="font-serif text-4xl gradient-text">2s</div>
-            <div className="mt-1 text-xs uppercase tracking-widest text-white/50">reakčný čas</div>
+            <div className="mt-1 text-xs uppercase tracking-widest text-white/50">odpoveď AI Copilota</div>
           </div>
         </div>
       </div>
